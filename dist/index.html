@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>weather app</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+  <header class="page-top">
+    <h1 class="page-banner"><i class="fas fa-cloud-sun"></i>Weather ninja</h1>
+  </header>
+  <div class="main-body">
+    <form class="google" id="form">
+      <input type="text" class="inputs" id="formInputs" placeholder="see the temp of your world">
+      <button class="btn btn-submit" id="searchBtn" type="submit">ENTER</button>
+    </form>
+    <div class="search-result" id="searchOutput">
+      <h1 id="city"></h1>
+      <P id="temperature"></P>
+      <p id="wind"></p>
+      <p id="possibility"></p>
+      <p id="humidity"></p>
+
+    </div>
+
+
+  </div>
+</body>
+
+</html>

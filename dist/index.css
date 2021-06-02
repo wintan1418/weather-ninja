@@ -1,0 +1,126 @@
+:root {
+  --primary-light: #665e49;
+  --secondary-light: #202a75;
+  --primary-dark: #0d1303e3;
+  --secondary-dark: #04262e;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6;
+}
+
+header {
+  font-family: "Antic Slab", serif;
+  font-size: 2.4rem;
+}
+
+button,
+input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  color: cornsilk;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+body {
+  background-image: url(meteor.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-top {
+  padding: 2rem;
+  background-color: var(--primary-dark);
+  color: var(--secondary-light);
+}
+
+.page-banner {
+  text-align: center;
+}
+
+.page-banner i {
+  color: white;
+  margin-right: 1rem;
+}
+.main {
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.google {
+  padding: 1rem;
+  text-align: center;
+}
+
+.inputs {
+  margin-right: 0.5rem;
+  background-color: cornsilk;
+  color: black;
+  border: 2px solid transparent;
+  font-size: 15px;
+}
+.btn {
+  background-color: var(--primary-light);
+  color: cornsilk;
+  transition: border 0.2s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.btn:hover {
+  border: 2px solid var(--secondary-light);
+}
+
+.btn:active {
+  color: #999;
+}
+
+.search-result {
+  display: none;
+  max-width: 300px;
+  padding: 2rem;
+  border-radius: 5px;
+  margin: 4rem auto;
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.search-result.active {
+  display: block;
+}
+
+.search-result * {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.search-result h3 {
+  border-radius: 5px;
+  color: var(--secondary-light);
+  font-size: 4rem;
+}
+
+.search-result p:nth-child(2) {
+  font-size: 3.6rem;
+}
+
+.search-result p {
+  font-size: 2rem;
+}
