@@ -8,7 +8,7 @@ This project comes after the introduction of the ES6 class keyword, ES6 modules,
 
 ## Live Demo
 
-[Live Demo Link](https://elegant-heisenberg-f56999.netlify.app/)
+[Live Demo Link](https://raw.githack.com/wintan1418/weather-ninja/feature/dist/index.html)
 
 Built With
 HTML
