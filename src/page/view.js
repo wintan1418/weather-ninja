@@ -10,12 +10,14 @@ const view = (() => {
     const possibility = document.getElementById('possibility');
     const humidity = document.getElementById('humidity');
     const wind = document.getElementById('wind');
+    const minMax = document.getElementById('minMax');
 
     city.textContent = `${weatherData.city}`;
     temperature.textContent = `${weatherData.temperature} °C`;
     possibility.textContent = `possibility: ${weatherData.possibility} °C`;
     humidity.textContent = `Humidity: ${weatherData.humidity} %`;
     wind.textContent = `Wind: ${weatherData.windSpeed} km/h`;
+    minMax.textContent = `minMax: ${weatherData.minMax} c/f`;
   }
 
   return { setSearchOutput };

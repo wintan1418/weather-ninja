@@ -2,11 +2,13 @@ const weather = (() => {
   function convertData(data) {
     const {
       name: city,
-      main: { temp: temperature, feels_like: possibility, humidity },
+      main: {
+        temp: temperature, feels_like: possibility, humidity, minmax: minMax,
+      },
       wind: { speed: windSpeed },
     } = data;
     return {
-      city, temperature, possibility, humidity, windSpeed,
+      city, temperature, possibility, humidity, windSpeed, minMax,
     };
   }
 

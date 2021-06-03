@@ -97,9 +97,10 @@ body {
   padding: 2rem;
   border-radius: 5px;
   margin: 4rem auto;
-  background-color: var(--primary-dark);
-  color: var(--primary-light);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: rgba(137, 43, 226, 0.404);
+  color: var(--primary-dark);
+  box-shadow: rgba(11, 12, 97, 0.87) 0px 5px 15px;
+  font-size: 20px;
 }
 
 .search-result.active {
@@ -113,20 +114,11 @@ body {
 
 .search-result h3 {
   border-radius: 5px;
-  color: var(--secondary-light);
+  color: var(--secondary-dark);
   font-size: 4rem;
 }
 
-/* .search-result p:nth-child(2) {
-  font-size: 3.6rem;
-}
-
-.search-result p {
-  font-size: 2rem;
-} */
 .toggle input { display: none; }
-
-/* (B) TOGGLE BUTTON WRAPPER */
 
 .toggle {
 
@@ -140,19 +132,13 @@ body {
 
 }
 
-/* (C) CUSTOM TOGGLE BUTTON "OUTSIDE BOX" */
-
 .slider {
-
-  /* (C1) FULLY FILL  CONTAINER */
 
   position: absolute;
 
   top: 0; bottom: 0;
 
   left: 0; right: 0;
-
-  /* (C2) COSMETIC STYLES */
 
   cursor: pointer;
 
@@ -162,11 +148,7 @@ body {
 
 }
 
-/* (D) CUSTOM TOGGLE BUTTON "INSIDE SLIDER BUTTON" */
-
 .slider::before {
-
-  /* (D1) FILL UP HALF OF  CONTAINER */
 
   content: "";
 
@@ -174,34 +156,20 @@ body {
 
   height: 100%;
 
-  /* (D2) DEFAULT BUTTON POSITION - LEFT */
-
   position: absolute;
 
   top: 0; left: 0;
 
-  /* (D3) COSMETIC STYLES */
-
   background-color: #eee;
 
 }
-
-/* (E) ON CHECKED (SWITCHED ON) */
-
-/* (E1) MAGIC CSS SLIDING ANIMATION */
-
 .slider, .slider::before { transition: all 0.2s; }
-
-/* (E2) TURN GREEN */
 
 .toggle input:checked + .slider {
 
-  border: 2px solid #258805;
+  border: 2px solid #330588;
 
   background-color: #8cbc13;
-
 }
-
-/* (E3) MOVE SLIDER BUTTON TO RIGHT */
 
 .toggle input:checked + .slider::before { left: 50%; }
