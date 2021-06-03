@@ -1,31 +1,40 @@
-const weather = (() => {
-  function convertData(data) {
-    const {
-      name: city,
-      main: {
-        temp: temperature, feels_like: possibility, humidity, minmax: minMax,
-      },
-      wind: { speed: windSpeed },
-    } = data;
-    return {
-      city, temperature, possibility, humidity, windSpeed, minMax,
-    };
-  }
+import dateArray from './page/date';
+import convertTemp from './page/toogle';
 
-  async function getData(city) {
-    const endpoint = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=716282e50b3279ab43fcb00aa8720927`;
-    try {
-      const response = await fetch(endpoint, { mode: 'cors' });
-      if (!response.ok) throw new Error(`City ${city} not found`);
-      const data = convertData(await response.json());
-      return data;
-    } catch (error) {
-      alert(error);
-      return null;
-    }
-  }
+const showWeatherReport = (weather) => {
+  const city = document.querySelector('#city');
+  city.innerText = `${weather.name}, ${weather.sys.country}`;
 
-  return { getData };
-})();
+  const temperature = document.querySelector('#temp');
+  temperature.innerHTML = `${Math.round(weather.main.temp)}&deg;C`;
 
-export default weather;
+  const minMax = document.querySelector('#min-max');
+  minMax.innerHTML = `${Math.floor(weather.main.temp_min)}&deg;C (min) / ${Math.ceil(weather.main.temp_max)}&deg;C (max)`;
+
+  const weatherType = document.querySelector('#description');
+  weatherType.innerText = `${weather.weather[0].main}`;
+
+  const weatherIcon = document.querySelector('#icon');
+  weatherIcon.innerText = `${weather.weather[0].icon}`;
+
+  const date = document.querySelector('#date');
+  const newDate = new Date();
+  date.innerText = dateArray(newDate);
+  convertTemp(weather);
+
+  const weatherTypes = {
+    Clear: 'sun',
+    Clouds: 'cloudy',
+    Rain: 'rain',
+    Mist: 'fog',
+    Snow: 'snow',
+    Thunderstorms: 'thunder',
+    Haze: 'fog',
+  };
+
+  document.body.style.backgroundImage = `url('./images/${weatherTypes[weatherType.textContent]}.gif')`;
+
+  document.querySelector('#icon').src = `./icons/${weatherIcon.textContent}.png`;
+};
+
+export default showWeatherReport;
