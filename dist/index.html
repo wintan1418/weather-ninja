@@ -13,33 +13,35 @@
 </head>
 
 <body>
-  <header class="page-top">
-    <h1 class="page-banner"><i class="fas fa-cloud-sun"></i>Weather ninja</h1>
-  </header>
-  <div class="main-body">
-    <form class="google" id="form">
-      <input type="text" class="inputs" id="formInputs" placeholder="see the temp of your world">
-      <button class="btn btn-submit" id="searchBtn" type="submit">ENTER</button>
-    </form>
-    <div class="search-result" id="searchOutput">
-
-      <p id="error"></p>
-      <div class="city" id="city">Fés, MA</div>
-      <div class="date" id="date">17 Mars (wednesday), 2021</div>
+  <div class="main">
+    <div class="searchBox">
+      <input type="text" id="input-box" class="input-box" placeholder="Enter a City..." autocomplete="off">
     </div>
-    716282e50b3279ab43fcb00aa8720927
 
-    <div class="status">
-      <div class="temperature" id="temp">17&deg;C</div>
-      <div class="min-max" id="min-max">17&deg;C (min) / 25&deg;C (max)</div>
-      <div class="description" id="description">Clear Sky</div>
-      <div class="images"><img id="icon"></img></div>
+    <div class="weather">
+      <div class="location">
+        <label class="toggle">
+          <input type="checkbox" id="cToggle" class="box" />
+          <span class="slider"></span>
+        </label>
+
+        
+
+      <div class="status">
+        <div class="temperature" id="temp">17&deg;C</div>
+        <div class="min-max" id="min-max">17&deg;C (min) / 25&deg;C (max)</div>
+        <div class="description" id="description">Clear Sky</div>
+        <div class="images"><img id="icon"></img></div>
+      </div>
     </div>
+
   </div>
 
 
 
-    </div>
+
+  <script src="main.js"></script>
 </body>
+
 
 </html>

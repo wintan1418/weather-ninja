@@ -1,5 +1,5 @@
-import dateArray from './page/date';
-import convertTemp from './page/toogle';
+import dateArray from './date';
+import convertTemp from './toogle';
 
 const showWeatherReport = (weather) => {
   const city = document.querySelector('#city');

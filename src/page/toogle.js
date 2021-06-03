@@ -6,11 +6,11 @@ const convertTemp = (weather) => {
   const minTemp = tempToF(weather.main.temp_min);
   const maxTemp = tempToF(weather.main.temp_max);
   const standarTemp = document.querySelector('#temp');
-  const minMax = document.querySelector('#minMax');
-  const myToggle = document.querySelector('#cToggle');
+  const minMax = document.querySelector('#min-max');
+  const myToogle = document.querySelector('#cToogle');
 
-  myToggle.addEventListener('click', () => {
-    if (myToggle.checked) {
+  myToogle.addEventListener('click', () => {
+    if (myToogle.checked) {
       standarTemp.innerHTML = `${Math.floor(currentTempF)}&deg;F`;
       minMax.innerHTML = `${Math.floor(minTemp)}&deg;F (min) / ${Math.floor(maxTemp)}&deg;F (max)`;
     } else {
