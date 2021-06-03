@@ -117,10 +117,91 @@ body {
   font-size: 4rem;
 }
 
-.search-result p:nth-child(2) {
+/* .search-result p:nth-child(2) {
   font-size: 3.6rem;
 }
 
 .search-result p {
   font-size: 2rem;
+} */
+.toggle input { display: none; }
+
+/* (B) TOGGLE BUTTON WRAPPER */
+
+.toggle {
+
+  position: relative;
+
+  display: inline-block;
+
+  width: 80px;
+
+  height: 30px;
+
 }
+
+/* (C) CUSTOM TOGGLE BUTTON "OUTSIDE BOX" */
+
+.slider {
+
+  /* (C1) FULLY FILL  CONTAINER */
+
+  position: absolute;
+
+  top: 0; bottom: 0;
+
+  left: 0; right: 0;
+
+  /* (C2) COSMETIC STYLES */
+
+  cursor: pointer;
+
+  border: 2px solid #b92121;
+
+  background-color: #bc2612;
+
+}
+
+/* (D) CUSTOM TOGGLE BUTTON "INSIDE SLIDER BUTTON" */
+
+.slider::before {
+
+  /* (D1) FILL UP HALF OF  CONTAINER */
+
+  content: "";
+
+  width: 50%;
+
+  height: 100%;
+
+  /* (D2) DEFAULT BUTTON POSITION - LEFT */
+
+  position: absolute;
+
+  top: 0; left: 0;
+
+  /* (D3) COSMETIC STYLES */
+
+  background-color: #eee;
+
+}
+
+/* (E) ON CHECKED (SWITCHED ON) */
+
+/* (E1) MAGIC CSS SLIDING ANIMATION */
+
+.slider, .slider::before { transition: all 0.2s; }
+
+/* (E2) TURN GREEN */
+
+.toggle input:checked + .slider {
+
+  border: 2px solid #258805;
+
+  background-color: #8cbc13;
+
+}
+
+/* (E3) MOVE SLIDER BUTTON TO RIGHT */
+
+.toggle input:checked + .slider::before { left: 50%; }
