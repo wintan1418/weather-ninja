@@ -37,7 +37,7 @@ body {
   border: none;
   outline: none;
   font-size: 1.2rem;
-  color: #582233;
+  color: #64152e;
   height: 50px;
   border-radius: 5px;
   padding: 0 10px;
@@ -45,14 +45,14 @@ body {
 }
 
 .input-box:focus {
-  background-color: rgba(255, 255, 255);
+  background-color: rgb(136, 73, 73);
 }
 
-/* (A) HIDE DEFAULT CHECKBOX */
+
 
 .toggle input { display: none; }
 
-/* (B) TOGGLE BUTTON WRAPPER */
+
 
 .toggle {
 
@@ -82,17 +82,17 @@ body {
 
   cursor: pointer;
 
-  border: 2px solid #b92121;
+  border: 2px solid #3d0c5e;
 
   background-color: #bc2612;
 
 }
 
-/* (D) CUSTOM TOGGLE BUTTON "INSIDE SLIDER BUTTON" */
+
 
 .slider::before {
 
-  /* (D1) FILL UP HALF OF  CONTAINER */
+ 
 
   content: "";
 
@@ -100,25 +100,21 @@ body {
 
   height: 100%;
 
-  /* (D2) DEFAULT BUTTON POSITION - LEFT */
+  
 
   position: absolute;
 
   top: 0; left: 0;
 
-  /* (D3) COSMETIC STYLES */
 
   background-color: #eee;
 
 }
 
-/* (E) ON CHECKED (SWITCHED ON) */
-
-/* (E1) MAGIC CSS SLIDING ANIMATION */
 
 .slider, .slider::before { transition: all 0.2s; }
 
-/* (E2) TURN GREEN */
+
 
 .toggle input:checked + .slider {
 
