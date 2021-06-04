@@ -1,12 +1,12 @@
 {
-  "name": "weather-ninja",
+  "name": "weather-nijna",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "This project comes after the introduction of the ES6 class keyword, ES6 modules, and webpack. The main goal of this project is for the student to show the understanding of the benefits of modularized code as well as the ability to set up a javascript application made of different modules using webpack.",
+  "main": "webpack.config.js",
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack serve --open"
+    "start": "webpack serve"
   },
   "repository": {
     "type": "git",

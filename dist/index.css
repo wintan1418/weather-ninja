@@ -5,10 +5,7 @@
 }
 
 body {
-  background: #56CCF2;
-  background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
-  background: linear-gradient(to right, #2F80ED, #56CCF2);
-
+  background: url(./images/sky.jpg);
   height: 100vh;
   overflow: hidden;
   background-repeat: no-repeat;
@@ -53,11 +50,11 @@ body {
 
 /* (A) HIDE DEFAULT CHECKBOX */
 
-.toogle input { display: none; }
+.toggle input { display: none; }
 
-/* (B) toogle BUTTON WRAPPER */
+/* (B) TOGGLE BUTTON WRAPPER */
 
-.toogle {
+.toggle {
 
   position: relative;
 
@@ -69,7 +66,7 @@ body {
 
 }
 
-/* (C) CUSTOM toogle BUTTON "OUTSIDE BOX" */
+/* (C) CUSTOM TOGGLE BUTTON "OUTSIDE BOX" */
 
 .slider {
 
@@ -91,7 +88,7 @@ body {
 
 }
 
-/* (D) CUSTOM toogle BUTTON "INSIDE SLIDER BUTTON" */
+/* (D) CUSTOM TOGGLE BUTTON "INSIDE SLIDER BUTTON" */
 
 .slider::before {
 
@@ -123,7 +120,7 @@ body {
 
 /* (E2) TURN GREEN */
 
-.toogle input:checked + .slider {
+.toggle input:checked + .slider {
 
   border: 2px solid #258805;
 
@@ -133,7 +130,7 @@ body {
 
 /* (E3) MOVE SLIDER BUTTON TO RIGHT */
 
-.toogle input:checked + .slider::before { left: 50%; }
+.toggle input:checked + .slider::before { left: 50%; }
 
 .weather {
   display: none;

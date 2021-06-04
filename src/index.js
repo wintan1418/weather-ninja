@@ -1,7 +1,7 @@
-import showWeatherReport from './page/weather';
+import showWeatherReport from './weather';
 
 const weatherApi = {
-  key: '2ac2a201f9a298fd6ce2b569bf302448',
+  key: '716282e50b3279ab43fcb00aa8720927',
 };
 
 const message = document.querySelector('#error');
